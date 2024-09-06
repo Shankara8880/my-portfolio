@@ -15,3 +15,19 @@ function toggleMenu() {
         });
     }
 });
+function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    nav.classList.toggle('show');
+}
+
+function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    nav.classList.toggle('show');
+}
+
+document.querySelectorAll('.nav-links ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        const nav = document.querySelector('.nav-links');
+        nav.classList.remove('show'); // Close menu after clicking
+    });
+});
