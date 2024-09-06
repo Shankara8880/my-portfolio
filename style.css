@@ -79,7 +79,7 @@
     font-size: 1.5rem;
     color: #64ffda;
     margin-right: 12px;
-    margin-left: 0px;
+    margin-left: 80px;
   }
   
   nav ul {
@@ -310,8 +310,8 @@
     border: 2px solid gold; 
 }
 .experience_heading{
-    display: "flex" !important;
-    flex-direction: row !important;
+    display: flex !important;
+    flex-direction: column !important;
     /* align-items: "center"; */
     /* justify-content: "center"; */
 }
@@ -354,4 +354,99 @@
     left: -18px; /* Adjust spacing for bullet */
   }
   
+
+  /* Default for large screens */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links ul li {
+  margin-right: 20px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+  .nav-links ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links.show ul {
+    display: flex;
+    position: absolute;
+    background-color: #0a192f;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links ul li {
+    margin: 10px 0;
+  }
+}
+
+  /* For small screens */
+@media (max-width: 768px) {
+  .nav-links ul {
+    display: none;
+    flex-direction: column;
+    background-color: #0a192f; /* Black background */
+    color: #8892b0; /* Red text */
+    text-align: center;
+  }
+
+  .nav-links.show ul li a {
+    color: #64ffda;
+  }
+}
+
+/* Styling for active link */
+.nav-links ul li a.active {
+    color: white;
+}
+
+/* Only for small screens */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; /* Adjust this to match the navbar height */
+  }
+
+  nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px; /* Ensure the navbar has a fixed height */
+  }
+}
+
   
+
+@media (min-width: 768px) {
+  .experience_heading{
+    display: flex !important;
+    flex-direction: row !important;
+    /* align-items: "center"; */
+    /* justify-content: "center"; */
+}
+}
+
